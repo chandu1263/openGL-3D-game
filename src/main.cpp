@@ -18,6 +18,7 @@ int lives;
 int health;
 int score;
 int timer,times;
+int win=0;
 /**************************
 * Customizable functions *
 **************************/
@@ -45,6 +46,13 @@ float camera_rotation_angle = 0;
 float pixel=0;
 int monster_count;
 float sun=0,moon=0;
+void lockandload()
+{
+  bullet.position.x=boat.position.x;
+  bullet.position.y=boat.position.y;
+  fired=0;
+  flag=1;
+}
 bool detect_collision_invincible(bounding_box_t rock, bounding_box_t boat) {
     return ((abs(rock.x-boat.x)<=2.5)&&(abs(rock.y-boat.y)<=3.5));
 }
@@ -67,6 +75,14 @@ bool detect_collision_hitboss(bounding_box_t boss, bounding_box_t boat)
 bool detect_collision_bomb(bounding_box_t rock,bounding_box_t bullet,float kk,float kk1)
 {
   return ((abs(bullet.x-rock.x)<=(0.1+kk1))&&(abs(bullet.y-rock.y)<=(0.1+kk)));
+}
+bool detect_killing_monster(bounding_box_t monster,bounding_box_t bullet)
+{
+  return ((abs(bullet.x-monster.x)<=(2))&&(abs(bullet.y-monster.y)<=(2)));
+}
+bool detect_boss_bullet(bounding_box_t boss,bounding_box_t bullet)
+{
+  return ((abs(boss.x-bullet.x)<=(4))&&(abs(boss.y-bullet.y)<=(4)));
 }
 Timer t60(1.0 / 60);
 
@@ -220,6 +236,8 @@ void tick_input(GLFWwindow *window) {
       cannon.cannon1.position.y += 0.1*flag2;
       cannon.cannontop.position.y += 0.1*flag2;
       cannon.gun.position.y += 0.1*flag2;
+      if(flag&&!fired)
+      bullet.position.y += 0.1*flag2;
     }
     if(boatdown)
     {
@@ -227,6 +245,8 @@ void tick_input(GLFWwindow *window) {
       cannon.cannon1.position.y -= 0.1*flag2;
       cannon.cannontop.position.y -= 0.1*flag2;
       cannon.gun.position.y -= 0.1*flag2;
+      if(flag&&!fired)
+      bullet.position.y -= 0.1*flag2;
     }
     if(boatright)
     {
@@ -234,6 +254,8 @@ void tick_input(GLFWwindow *window) {
       cannon.cannon1.position.x += 0.1*flag2;
       cannon.cannontop.position.x += 0.1*flag2;
       cannon.gun.position.x += 0.1*flag2;
+      if(flag&&!fired)
+      bullet.position.x += 0.1*flag2;
     }
     if(boatleft)
     {
@@ -241,6 +263,8 @@ void tick_input(GLFWwindow *window) {
       cannon.cannon1.position.x -= 0.1*flag2;
       cannon.cannontop.position.x -= 0.1*flag2;
       cannon.gun.position.x -= 0.1*flag2;
+      if(flag&&!fired)
+      bullet.position.x -= 0.1*flag2;
     }
     int boatview2 = glfwGetKey(window, GLFW_KEY_C);
     if(boatview2)
@@ -328,20 +352,41 @@ void tick_input(GLFWwindow *window) {
       printf("danger\n" );
       health -= 10;
     }
+    if(detect_boss_bullet(boss.bounding_box(),boat.bounding_box()))
+    {
+      if(monster_count<=5)
+      {
+        win=1;
+        printf("you won the game!!!\n");
+
+    }
+    }
     if(detect_collision_hitboss(boss.bounding_box(),boat.bounding_box()))
     {
       printf("gameover!!\n");
       lives=0;
 
     }
-    for(i=0;i<10;i++){
-    if(detect_collision_monster(monster[i].bounding_box(),boat.bounding_box()))
+    for(i=0;i<10;i++)
     {
-      if(monster[i].appear){
-      health -=50;
-      monster[i].appear=0;
-    monster_count--;}
-    }}
+        if(detect_collision_monster(monster[i].bounding_box(),boat.bounding_box()))
+        {
+          if(monster[i].appear){
+          health -=50;
+          monster[i].appear=0;
+        monster_count--;}
+        }
+        if(detect_killing_monster(monster[i].bounding_box(),bullet.bounding_box()))
+        {
+          if(monster[i].appear)
+          {
+            score+=25;
+            monster[i].appear=0;
+          monster_count--;
+          flag=0;
+          }
+        }
+    }
     int yy;
     for(i=0;i<150;i++)
     {
@@ -366,7 +411,8 @@ void tick_input(GLFWwindow *window) {
       {
         if(rocks[i].appear)
         {
-          rocks[i].appear=1;
+          score+=10;
+          rocks[i].appear=0;
           flag=0;
         }
       }
@@ -385,31 +431,19 @@ void tick_elements() {
     flag2=1;
     timer=1;
   }
-  if((abs(boat.position.x-bullet.position.x)<15)&&(abs(boat.position.y-bullet.position.y)<15)&&flag&&fired)
+  if(flag&&fired)
   {
       alpha=cannon.cannon1.rotation;
-      bullet.position.x+=0.5*tan(alpha);
-      bullet.position.y+=0.5/tan(alpha);
+      bullet.position.x+=0.6*sin(alpha*M_PI/180.0f);
+      bullet.position.y+=0.6*cos(alpha*M_PI/180.0f);
   }
-  // if(fired&&flag==0)
-  // {
-  //   bullet.position.x=boat.position.x;
-  //   bullet.position.y=boat.position.y;
-  //   flag=1;
-  // }
-  if((abs(boat.position.x-bullet.position.x)>=15)&&(abs(boat.position.y-bullet.position.y)>=15)&&flag&&fired)
+  if(flag==0)
+  lockandload();
+  if((abs(boat.position.x-bullet.position.x)>=20)||(abs(boat.position.y-bullet.position.y)>=20))
   {
-    bullet.position.x=boat.position.x;
-    bullet.position.y=boat.position.y;
-    flag=1;
+    lockandload();
+  }
 
-  }
-  if(flag==0&&fired)
-  {
-    bullet.position.x=boat.position.x;
-    bullet.position.y=boat.position.y;
-    flag=1;
-  }
 
 
 
@@ -450,6 +484,7 @@ void initGL(GLFWwindow *window, int width, int height) {
     // Create the models
     timer=1;
     times=0;
+    fired=0;
     //pyramid = Pyramid(0,0,-1,1,1,2,COLOR_BROWN);
     water   = Water(0,0,-2,COLOR_BLUE);
     rock1   = Pyramid(50,10,-1,3,2,2,COLOR_BLACK);
@@ -468,13 +503,14 @@ void initGL(GLFWwindow *window, int width, int height) {
     boat.view=2;
     boss = Boss(90,90,-1);
     cannon=Cannon(0,0,0);
-    bullet=Cube(0,0,1,0.3,0.3,0.3,COLOR_GREY);
+    bullet=Cube(0,0,1,0.3,0.3,0.3,COLOR_BLACK);
     //thrower=Cube(boat.position.x,boat.position.y-1,5,,,,COLOR_ORANGE);
     for(i=0;i<10;i++)
     {
       randomx=(rand()%10000)/100;
       randomy=(rand()%10000)/100;
       monster[i] = Monster(randomx,randomy,-1);
+      monster[i].appear=1;
     }
     for(i=0;i<150;i++)
     {
@@ -570,6 +606,7 @@ int main(int argc, char **argv) {
     lives=10;
     boost=0;
     flag2=1;
+    flag=1;
     monster_count=10;
     window = initGLFW(width, height);
 
@@ -580,6 +617,11 @@ int main(int argc, char **argv) {
         // Process timers
 
         if (t60.processTick()) {
+          if(win)
+          {
+            printf("congrats\n" );
+            break;
+          }
             if(lives<=0)
             {
               printf("Game over!!\n" );
