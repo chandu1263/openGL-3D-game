@@ -17,12 +17,15 @@ GLFWwindow *window;
 int lives;
 int health;
 int score;
-
+int timer,times;
 /**************************
 * Customizable functions *
 **************************/
 //Pyramid pyramid;
+int fired,flag,flag1,flag2,boost;
+float alpha,beeta;
 Water water;
+Cube bullet;
 Cube thrower;
 Pyramid rock1;
 Pyramid rock2;
@@ -60,6 +63,10 @@ bool detect_collision_boss(bounding_box_t boss,bounding_box_t boat)
 bool detect_collision_hitboss(bounding_box_t boss, bounding_box_t boat)
 {
   return ((abs(boss.x-boat.x)<= 5.5)&&(abs(boss.y-boat.y)<=3));
+}
+bool detect_collision_bomb(bounding_box_t rock,bounding_box_t bullet,float kk,float kk1)
+{
+  return ((abs(bullet.x-rock.x)<=(0.1+kk1))&&(abs(bullet.y-rock.y)<=(0.1+kk)));
 }
 Timer t60(1.0 / 60);
 
@@ -101,7 +108,7 @@ void draw() {
     // frpm helicopter
     if(boat.view==3)
     {
-      glm::vec3 eye ( 0,0,70);
+      glm::vec3 eye ( pixel+20*cos(camera_rotation_angle*M_PI/180.0f),  pixel+20*sin(camera_rotation_angle*M_PI/180.0f),70);
     // Target - Where is the camera looking at.  Don't change unless you are sure!!
     glm::vec3 target (boat.position.x,boat.position.y,-1);
     // Up - Up vector defines tilt of camera.  Don't change unless you are sure!!
@@ -167,7 +174,9 @@ void draw() {
     monster[i].draw(VP);}
     if(monster_count<=5)
     boss.draw(VP);
-    //cannon.draw(VP);
+    cannon.draw(VP);
+    if(fired)
+    bullet.draw(VP);
 }
 
 void tick_input(GLFWwindow *window) {
@@ -188,26 +197,50 @@ void tick_input(GLFWwindow *window) {
     if(down)
     {
       pixel -=0.1;
-    }
+    }int bulletfiring = glfwGetKey(window,GLFW_KEY_SPACE);
+    int cannonmoveclock = glfwGetKey(window, GLFW_KEY_J);
+    int cannonmoveanticlock = glfwGetKey(window, GLFW_KEY_L);
     int boatleft = glfwGetKey(window, GLFW_KEY_A);
     int boatup = glfwGetKey(window, GLFW_KEY_W);
     int boatdown = glfwGetKey(window, GLFW_KEY_S);
     int boatright = glfwGetKey(window, GLFW_KEY_D);
+    int booster = glfwGetKey(window, GLFW_KEY_P);
+    if(booster)
+    {
+      if(boost>0)
+      {
+        flag2=2;
+        boost--;
+        timer=0;
+      }
+    }
     if(boatup)
     {
-      boat.position.y += 0.1;
+      boat.position.y += 0.1*flag2;
+      cannon.cannon1.position.y += 0.1*flag2;
+      cannon.cannontop.position.y += 0.1*flag2;
+      cannon.gun.position.y += 0.1*flag2;
     }
     if(boatdown)
     {
-      boat.position.y -= 0.1;
+      boat.position.y -= 0.1*flag2;
+      cannon.cannon1.position.y -= 0.1*flag2;
+      cannon.cannontop.position.y -= 0.1*flag2;
+      cannon.gun.position.y -= 0.1*flag2;
     }
     if(boatright)
     {
-      boat.position.x += 0.1;
+      boat.position.x += 0.1*flag2;
+      cannon.cannon1.position.x += 0.1*flag2;
+      cannon.cannontop.position.x += 0.1*flag2;
+      cannon.gun.position.x += 0.1*flag2;
     }
     if(boatleft)
     {
-      boat.position.x -= 0.1  ;
+      boat.position.x -= 0.1*flag2  ;
+      cannon.cannon1.position.x -= 0.1*flag2;
+      cannon.cannontop.position.x -= 0.1*flag2;
+      cannon.gun.position.x -= 0.1*flag2;
     }
     int boatview2 = glfwGetKey(window, GLFW_KEY_C);
     if(boatview2)
@@ -234,13 +267,29 @@ void tick_input(GLFWwindow *window) {
     {
       boat.view=5;
     }
+    if(cannonmoveclock)
+    {
+      cannon.cannon1.rotation-=0.5;
+      cannon.cannontop.rotation-=0.5;
+      cannon.gun.rotation-=0.5;
+    }
+    if(cannonmoveanticlock)
+    {
+      cannon.cannon1.rotation+=0.5;
+      cannon.cannontop.rotation+=0.5;
+      cannon.gun.rotation+=0.5;
+    }
+    if(bulletfiring)
+    {
+      fired=1;
+    }
 
     if(detect_collision_invincible(rock2.bounding_box(),boat.bounding_box()))
     {
       if(rock2.appear)
       {
       rock2.appear=0;
-      score++;
+      score +=5;boost++;
 
       }
     }
@@ -248,31 +297,31 @@ void tick_input(GLFWwindow *window) {
     {
       if(rock3.appear){
       rock3.appear=0;
-      score++;}
+      score +=5;boost++;}
     }
     if(detect_collision_invincible(rock4.bounding_box(),boat.bounding_box()))
     {
       if(rock4.appear){
       rock4.appear=0;
-      score++;}
+      score +=5;boost++;}
     }
     if(detect_collision_invincible(rock5.bounding_box(),boat.bounding_box()))
     {
       if(rock5.appear){
       rock5.appear=0;
-      score++;}
+      score +=5;boost++;}
     }
     if(detect_collision_invincible(rock1.bounding_box(),boat.bounding_box()))
     {
       if(rock1.appear){
       rock1.appear=0;
-      score++;}
+      score +=5;boost++;}
     }
     if(detect_collision_invincible(rock6.bounding_box(),boat.bounding_box()))
     {
       if(rock6.appear){
       rock6.appear=0;
-      score++;}
+      score +=5;boost++;}
     }
     if(detect_collision_boss(boss.bounding_box(),boat.bounding_box()))
     {
@@ -313,20 +362,68 @@ void tick_input(GLFWwindow *window) {
         }
         //printf("died\n" );
       }
+      if(detect_collision_bomb(bullet.bounding_box(),rocks[i].bounding_box(),randl[i],randb[i]))
+      {
+        if(rocks[i].appear)
+        {
+          rocks[i].appear=1;
+          flag=0;
+        }
+      }
     }
     sun=boat.position.x;
     moon=boat.position.y;
 }
 
 void tick_elements() {
-  cannon.tick();
+    if(timer==0)
+  {
+    times++;
+  }
+  if(times>=300)
+  {
+    flag2=1;
+    timer=1;
+  }
+  if((abs(boat.position.x-bullet.position.x)<15)&&(abs(boat.position.y-bullet.position.y)<15)&&flag&&fired)
+  {
+      alpha=cannon.cannon1.rotation;
+      bullet.position.x+=0.5*tan(alpha);
+      bullet.position.y+=0.5/tan(alpha);
+  }
+  // if(fired&&flag==0)
+  // {
+  //   bullet.position.x=boat.position.x;
+  //   bullet.position.y=boat.position.y;
+  //   flag=1;
+  // }
+  if((abs(boat.position.x-bullet.position.x)>=15)&&(abs(boat.position.y-bullet.position.y)>=15)&&flag&&fired)
+  {
+    bullet.position.x=boat.position.x;
+    bullet.position.y=boat.position.y;
+    flag=1;
+
+  }
+  if(flag==0&&fired)
+  {
+    bullet.position.x=boat.position.x;
+    bullet.position.y=boat.position.y;
+    flag=1;
+  }
+
+
+
 for(i=0;i<10;i++)
 {
   if(monster[i].appear)
 monster[i].tick();
 }
 boat.tick();
-
+for(i=0;i<150;i++)
+{
+  if(rocks[i].appear)
+    rocks[i].tick();
+}
 if(monster_count<=5)
 boss.tick();
 float slope=(boat.position.y-boss.position.y)/(boat.position.x-boss.position.x);
@@ -335,6 +432,12 @@ if(monster_count<=5)
 boss.position.x -= 0.1;
 boss.position.y = boss.position.y - (0.1/slope);
 }
+rock1.tick1();
+rock2.tick1();
+rock3.tick1();
+rock4.tick1();
+rock5.tick1();
+rock6.tick1();
 }
 int randomx,randomy,randoml,randomb,randomh;
 int mulx,muly;
@@ -345,25 +448,27 @@ color_t colour;
 void initGL(GLFWwindow *window, int width, int height) {
     /* Objects should be created before any other gl function and shaders */
     // Create the models
-
+    timer=1;
+    times=0;
     //pyramid = Pyramid(0,0,-1,1,1,2,COLOR_BROWN);
     water   = Water(0,0,-2,COLOR_BLUE);
-    rock1   = Pyramid(5,10,-1,3,2,2,COLOR_BLACK);
+    rock1   = Pyramid(50,10,-1,3,2,2,COLOR_BLACK);
     rock1.appear=1;
-    rock2   = Pyramid(5,5,-1,1,1,1,COLOR_BLACK);
+    rock2   = Pyramid(65,45,-1,1,1,1,COLOR_BLACK);
     rock2.appear=1;
-    rock3   = Pyramid(-5,10,-1,1,1,1,COLOR_BLACK);
+    rock3   = Pyramid(-35,110,-1,1,1,1,COLOR_BLACK);
     rock3.appear=1;
-    rock4   = Pyramid(5,-10,-1,1,1,1,COLOR_BLACK);
+    rock4   = Pyramid(115,-100,-1,1,1,1,COLOR_BLACK);
     rock4.appear=1;
-    rock5   = Pyramid(15,15,-1,1,1,1,COLOR_BLACK);
+    rock5   = Pyramid(85,85,-1,1,1,1,COLOR_BLACK);
     rock5.appear=1;
-    rock6   = Pyramid(-15,-10,-1,1,1,1,COLOR_BLACK);
+    rock6   = Pyramid(-95,-40,-1,1,1,1,COLOR_BLACK);
     rock6.appear=1;
     boat = Boat(0,0,-1,5,3,2,COLOR_BROWN);
     boat.view=2;
     boss = Boss(90,90,-1);
-    cannon=Cannon(sun,moon-1,5,2,1,1,COLOR_ORANGE);
+    cannon=Cannon(0,0,0);
+    bullet=Cube(0,0,1,0.3,0.3,0.3,COLOR_GREY);
     //thrower=Cube(boat.position.x,boat.position.y-1,5,,,,COLOR_ORANGE);
     for(i=0;i<10;i++)
     {
@@ -457,12 +562,14 @@ void initGL(GLFWwindow *window, int width, int height) {
 
 
 int main(int argc, char **argv) {
-    srand(time(0));
+    srand((0));
     int width  = 600;
     int height = 600;
     score=0;
     health=100;
     lives=10;
+    boost=0;
+    flag2=1;
     monster_count=10;
     window = initGLFW(width, height);
 
@@ -514,7 +621,15 @@ int main(int argc, char **argv) {
           Result3 = convert3.str();
           const char * seven = "  MONSTERS ";
           const char * eight =  Result3.c_str();
-          string total( string(one) + two + string(three) + four +string(five) + six + string(seven)+eight);
+
+          string Result4;
+          stringstream convert4;
+          convert4 << boost;
+          Result4 = convert4.str();
+          const char * nine = "  Boost ";
+          const char * ten =  Result4.c_str();
+
+          string total( string(one) + two + string(three) + four +string(five) + six + string(seven)+eight + string(nine)+ten);
           glfwSetWindowTitle(window, total.c_str());
 
 

@@ -120,8 +120,8 @@ Boat::Boat(float x, float y, float z, float b, float l, float h, color_t color) 
      0,0,hh1/2
 
    };
-   this->cannon=Cube(0,-1,hh1,0.6,0.6,3,COLOR_ORANGE);
-   this->cannontop=Cube(0,-1,hh1+1.5,1.1,1.1,1,COLOR_LRED);
+   //this->cannon=Cube(ll1-1.5,bb1-1,hh1,0.6,0.6,3,COLOR_ORANGE);
+   //this->cannontop=Cube(ll1-1.5,bb1-1,hh1+1.5,1.1,1.1,1,COLOR_LRED);
 
 
     this->object = create3DObject(GL_TRIANGLES, 12*3, vertex_buffer_data, color, GL_FILL);
@@ -139,8 +139,8 @@ void Boat::draw(glm::mat4 VP) {
     draw3DObject(this->object);
     draw3DObject(this->object1);
     draw3DObject(this->object2);
-    cannon.draw(VP);
-    cannontop.draw(VP);
+    //cannon.draw(VP);
+    //cannontop.draw(VP);
 }
 
 void Boat::set_position(float x, float y, float z) {

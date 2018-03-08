@@ -12,6 +12,7 @@ CMakeFiles/graphics_asgn1.dir/src/boss.cpp.o: ../src/main.h
 
 CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.o: ../src/cannon.cpp
 CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.o: ../src/cannon.h
+CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.o: ../src/cube.h
 CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.o: ../src/main.h
 
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: ../src/color.cpp

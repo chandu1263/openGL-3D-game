@@ -38,7 +38,7 @@ Pyramid::Pyramid(float x, float y, float z, float b, float l, float h, color_t c
 void Pyramid::draw(glm::mat4 VP) {
     Matrices.model = glm::mat4(1.0f);
     glm::mat4 translate = glm::translate (this->position);    // glTranslatef
-    glm::mat4 rotate    = glm::rotate((float) (this->rotation * M_PI / 180.0f), glm::vec3(1, 0, 0));
+    glm::mat4 rotate    = glm::rotate((float) (this->rotation * M_PI / 180.0f), glm::vec3(0, 0, 1));
     Matrices.model *= (translate * rotate);
     glm::mat4 MVP = VP * Matrices.model;
     glUniformMatrix4fv(Matrices.MatrixID, 1, GL_FALSE, &MVP[0][0]);
@@ -50,10 +50,15 @@ void Pyramid::set_position(float x, float y, float z) {
 }
 
 void Pyramid::tick() {
+
    // this->rotation += speed;
     //this->position.x += speedx;
     //this->position.y += speedy;
     //this->position.z +=speedz;
+  }
+  void Pyramid::tick1()
+  {
+    this->rotation += 1;
   }
   bounding_box_t Pyramid::bounding_box() {
     float x = this->position.x, y = this->position.y;

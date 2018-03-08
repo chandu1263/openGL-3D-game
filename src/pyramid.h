@@ -19,6 +19,7 @@ public:
     bounding_box_t bounding_box();
     void set_position(float x, float y, float z);
     void tick();
+    void tick1();
 private:
     VAO *object;
 };

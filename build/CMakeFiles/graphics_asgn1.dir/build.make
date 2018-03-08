@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master
+CMAKE_SOURCE_DIR = /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build
+CMAKE_BINARY_DIR = /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/graphics_asgn1.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/graphics_asgn1.dir/flags.make
 
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: ../src/color.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/color.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/color.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/color.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/color.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/color.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/color.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/color.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/color.cpp > CMakeFiles/graphics_asgn1.dir/src/color.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/color.cpp > CMakeFiles/graphics_asgn1.dir/src/color.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/color.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/color.cpp -o CMakeFiles/graphics_asgn1.dir/src/color.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/color.cpp -o CMakeFiles/graphics_asgn1.dir/src/color.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/graphics_asgn1.dir/src/color.cpp.o.provides.build: CMakeFiles/graphic
 
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o: ../src/nonedit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/nonedit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/nonedit.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/nonedit.cpp > CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/nonedit.cpp > CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/nonedit.cpp -o CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/nonedit.cpp -o CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o.provides.build: CMakeFiles/graph
 
 CMakeFiles/graphics_asgn1.dir/src/boss.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/boss.cpp.o: ../src/boss.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/boss.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/boss.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/boss.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/boss.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/boss.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/boss.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/boss.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/boss.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/boss.cpp > CMakeFiles/graphics_asgn1.dir/src/boss.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/boss.cpp > CMakeFiles/graphics_asgn1.dir/src/boss.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/boss.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/boss.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/boss.cpp -o CMakeFiles/graphics_asgn1.dir/src/boss.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/boss.cpp -o CMakeFiles/graphics_asgn1.dir/src/boss.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/boss.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/graphics_asgn1.dir/src/boss.cpp.o.provides.build: CMakeFiles/graphics
 
 CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.o: ../src/cannon.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/cannon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/cannon.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/cannon.cpp > CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/cannon.cpp > CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/cannon.cpp -o CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/cannon.cpp -o CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/graphics_asgn1.dir/src/cannon.cpp.o.provides.build: CMakeFiles/graphi
 
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o: ../src/timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/timer.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/timer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/timer.cpp > CMakeFiles/graphics_asgn1.dir/src/timer.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/timer.cpp > CMakeFiles/graphics_asgn1.dir/src/timer.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/timer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/timer.cpp -o CMakeFiles/graphics_asgn1.dir/src/timer.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/timer.cpp -o CMakeFiles/graphics_asgn1.dir/src/timer.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o.provides.build: CMakeFiles/graphic
 
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/main.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/main.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/main.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/main.cpp > CMakeFiles/graphics_asgn1.dir/src/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/main.cpp > CMakeFiles/graphics_asgn1.dir/src/main.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/main.cpp -o CMakeFiles/graphics_asgn1.dir/src/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/main.cpp -o CMakeFiles/graphics_asgn1.dir/src/main.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o.provides.build: CMakeFiles/graphics
 
 CMakeFiles/graphics_asgn1.dir/src/water.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/water.cpp.o: ../src/water.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/water.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/water.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/water.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/water.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/water.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/water.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/water.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/water.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/water.cpp > CMakeFiles/graphics_asgn1.dir/src/water.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/water.cpp > CMakeFiles/graphics_asgn1.dir/src/water.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/water.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/water.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/water.cpp -o CMakeFiles/graphics_asgn1.dir/src/water.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/water.cpp -o CMakeFiles/graphics_asgn1.dir/src/water.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/water.cpp.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/graphics_asgn1.dir/src/water.cpp.o.provides.build: CMakeFiles/graphic
 
 CMakeFiles/graphics_asgn1.dir/src/boat.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/boat.cpp.o: ../src/boat.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/boat.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/boat.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/boat.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/boat.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/boat.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/boat.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/boat.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/boat.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/boat.cpp > CMakeFiles/graphics_asgn1.dir/src/boat.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/boat.cpp > CMakeFiles/graphics_asgn1.dir/src/boat.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/boat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/boat.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/boat.cpp -o CMakeFiles/graphics_asgn1.dir/src/boat.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/boat.cpp -o CMakeFiles/graphics_asgn1.dir/src/boat.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/boat.cpp.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/graphics_asgn1.dir/src/boat.cpp.o.provides.build: CMakeFiles/graphics
 
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.o: ../src/input.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/input.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/input.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/input.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/input.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/input.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/input.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/input.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/input.cpp > CMakeFiles/graphics_asgn1.dir/src/input.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/input.cpp > CMakeFiles/graphics_asgn1.dir/src/input.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/input.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/input.cpp -o CMakeFiles/graphics_asgn1.dir/src/input.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/input.cpp -o CMakeFiles/graphics_asgn1.dir/src/input.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.o.requires:
 
@@ -275,16 +275,16 @@ CMakeFiles/graphics_asgn1.dir/src/input.cpp.o.provides.build: CMakeFiles/graphic
 
 CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.o: ../src/pyramid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/pyramid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/pyramid.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/pyramid.cpp > CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/pyramid.cpp > CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/pyramid.cpp -o CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/pyramid.cpp -o CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.o.requires:
 
@@ -299,16 +299,16 @@ CMakeFiles/graphics_asgn1.dir/src/pyramid.cpp.o.provides.build: CMakeFiles/graph
 
 CMakeFiles/graphics_asgn1.dir/src/monster.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/monster.cpp.o: ../src/monster.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/monster.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/monster.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/monster.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/monster.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/monster.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/monster.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/monster.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/monster.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/monster.cpp > CMakeFiles/graphics_asgn1.dir/src/monster.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/monster.cpp > CMakeFiles/graphics_asgn1.dir/src/monster.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/monster.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/monster.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/monster.cpp -o CMakeFiles/graphics_asgn1.dir/src/monster.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/monster.cpp -o CMakeFiles/graphics_asgn1.dir/src/monster.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/monster.cpp.o.requires:
 
@@ -323,16 +323,16 @@ CMakeFiles/graphics_asgn1.dir/src/monster.cpp.o.provides.build: CMakeFiles/graph
 
 CMakeFiles/graphics_asgn1.dir/src/cube.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/cube.cpp.o: ../src/cube.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/cube.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/cube.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/cube.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/cube.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/cube.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/cube.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/cube.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/cube.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/cube.cpp > CMakeFiles/graphics_asgn1.dir/src/cube.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/cube.cpp > CMakeFiles/graphics_asgn1.dir/src/cube.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/cube.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/cube.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/cube.cpp -o CMakeFiles/graphics_asgn1.dir/src/cube.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/cube.cpp -o CMakeFiles/graphics_asgn1.dir/src/cube.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/cube.cpp.o.requires:
 
@@ -347,16 +347,16 @@ CMakeFiles/graphics_asgn1.dir/src/cube.cpp.o.provides.build: CMakeFiles/graphics
 
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o: ../src/other_handlers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/other_handlers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o -c /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/other_handlers.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/other_handlers.cpp > CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/other_handlers.cpp > CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/src/other_handlers.cpp -o CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/src/other_handlers.cpp -o CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o.requires:
 
@@ -403,7 +403,7 @@ graphics_asgn1: CMakeFiles/graphics_asgn1.dir/src/cube.cpp.o
 graphics_asgn1: CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o
 graphics_asgn1: CMakeFiles/graphics_asgn1.dir/build.make
 graphics_asgn1: CMakeFiles/graphics_asgn1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable graphics_asgn1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable graphics_asgn1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/graphics_asgn1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -432,6 +432,6 @@ CMakeFiles/graphics_asgn1.dir/clean:
 .PHONY : CMakeFiles/graphics_asgn1.dir/clean
 
 CMakeFiles/graphics_asgn1.dir/depend:
-	cd /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build /home/chandu/Desktop/graphics/20161130_Assignment2/graphics-boilerplate-master/build/CMakeFiles/graphics_asgn1.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build /home/chandu/Desktop/graphics/20161130_Assignment2/openGL-3D-game/build/CMakeFiles/graphics_asgn1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/graphics_asgn1.dir/depend
 
